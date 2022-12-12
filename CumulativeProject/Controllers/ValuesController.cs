@@ -16,14 +16,20 @@ namespace CumulativeProject.Controllers
         }
 
         // GET api/values/5
+        [Route("api/values/{id}")]
+
         public string Get(int id)
         {
             return "value";
         }
 
         // POST api/values
-        public void Post([FromBody] string value)
+        //change void to string
+        [Route("api/values")]
+        [HttpPost]
+        public string Post([FromBody] string value)
         {
+            return "value";
         }
 
         // PUT api/values/5

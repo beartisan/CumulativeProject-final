@@ -11,7 +11,7 @@ namespace CumulativeProject.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            //index test
             return View();
         }
     }

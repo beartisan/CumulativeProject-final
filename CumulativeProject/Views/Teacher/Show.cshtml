@@ -5,8 +5,15 @@
     ViewBag.Title = "Show";
 }
 
+<a class="navbar-link"  style="background-color: yellow; margin-right: 2em; margin-top: 2em; border: 1px black solid; border-radius: 10px; padding: 5px;" href="/Teacher/List" > Go Back to List of Teachers</a>
+
+<a class="navbar-link" style="margin-right: 2em; margin-top: 2em; border: 1px black solid; border-radius: 10px; padding: 5px; " href="/Teacher/Edit/@Model.TeacherId"> Edit Teacher</a>
+
+
+<a class="navbar-link" style="background-color: red; color: white; margin-right: 2em; margin-top: 2em; border: 1px black solid; border-radius: 10px; padding: 5px;" href="/teacher/DeleteConfirm/@Model.TeacherId">Delete Teachers</a>
+
 <h2> @Model.TeacherFname @Model.TeacherLname </h2>
 <p>@Model.TeacherFname's Teacher ID is @Model.TeacherId</p>
-<p>@Model.TeacherFname's Employee Number is @Model.EmployeeNumber</p>
+<p>@Model.TeacherFname's Employee Number is </p><p style="font-style: italic;"> @Model.EmployeeNumber</p>
 <p>@Model.TeacherFname's salary is $@Model.Salary per hour</p>
-<p>@Model.TeacherFname was hired on @Model.HireDate</p>
+<p>@Model.TeacherFname was hired on @Model.HireDate.ToString("dd-MMM-yyyy")</p>
